@@ -1,5 +1,6 @@
 #Add two strings together that, when concatenated, return your first and last name as your full name in one string.
-
+puts "*****************
+PROBLEM 1"
 first_name = 'Michael'
 last_name = 'Rollin'
 
@@ -9,7 +10,8 @@ puts first_name + ' ' + last_name
 
 
 #Use the modulo operator, division, or a combination of both to take a 4 digit number and find the digit in the: 1) thousands place 2) hundreds place 3) tens place 4) ones place
-
+puts "*****************
+PROBLEM 2"
 my_num = 3875
 thousands = my_num / 1000
 hundreds = (my_num % 1000) / 100
@@ -28,7 +30,8 @@ puts "ones place: = #{ones}"
 
 
 #Write a program that uses a hash to store a list of movie titles with the year they came out. Then use the puts command to make your program print out the year of each movie to the screen. The output for your program should look something like this.
-
+puts "*****************
+PROBLEM 3"
 #groundhog_day 1993
 
 #ghostbusters 1984
@@ -51,6 +54,8 @@ puts "Lost In Translation #{bill_murray_films[:lost_in_translation]}"
 
 #solution:
 #NOTE: they specified each element of the hash a bit more specific
+puts "*****************
+PROBLEM 3 (FROM SOLUTION)"
 
 movies = {:blammo => 2345}
 
@@ -67,6 +72,8 @@ puts bill_murray_films_revised[:groundhog_day_revised]
 
 
 #Use the dates from the previous example and store them in an array. Then make your program output the same thing as exercise 3.
+puts "*****************
+PROBLEM 4"
 
 my_array = [1993, 1980, 1984, 2003]
 
@@ -98,9 +105,39 @@ puts my_array[3]
 
 #SOLUTION (from video):
 #NOTE: Their solution was not nearly as involved as I expected! I did not capture every solution as it is uninteresting etc,.
-
+puts "*****************
+PROBLEM 5 (FROM VIDEO)"
 fact_six = 6 * 5 * 4 * 3 * 2 * 1
 puts fact_six
+
+
+
+#Write a program that calculates the squares of 3 float numbers of your choosing and outputs the result to the screen.
+puts "*****************
+PROBLEM 6"
+
+def squares(float)
+  squared = float**2
+end
+
+puts "10 squared = #{squares(10)}"
+puts "10 squared = #{squares(3)}"
+puts "10 squared = #{squares(5)}"
+
+
+
+
+#What does the following error message tell you?
+
+# SyntaxError: (irb):2: syntax error, unexpected ')', expecting '}'
+#   from /usr/local/rvm/rubies/ruby-2.0.0-rc2/bin/irb:16:in `<main>'
+puts "*****************
+PROBLEM 7"
+answer = "Ruby interpreter is expecting curly braces where paranthesis are present in the code."
+
+puts answer
+
+
 
   
 
