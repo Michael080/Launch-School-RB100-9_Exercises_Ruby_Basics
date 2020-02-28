@@ -80,25 +80,27 @@ puts my_array[3]
 
 #Write a program that outputs the factorial of the numbers 5, 6, 7, and 8.
 
-num = 5
-def factorial(num)
-  i = 0
+# num = 5
+# def factorial(num)
+#   i = 0
 
-  loop do
-    i += 1
-    factored = num * (num - 1)
-    puts "factored: #{factored}"
-  if i == 5
-    puts factored
-    break
-  end
-end
+#   loop do
+#     i += 1
+#     factored = num * (num - 1)
+#     puts "factored: #{factored}"
+#   if i == 5
+#     puts factored
+#     break
+#   end
+# end
 
 #NOTE: !!! This was not my solution to the problem. Could not test out this code and stopped because of a syntax error that I haven't figured out...YET
 
 #SOLUTION (from video):
+#NOTE: Their solution was not nearly as involved as I expected! I did not capture every solution as it is uninteresting etc,.
 
-#
+fact_six = 6 * 5 * 4 * 3 * 2 * 1
+puts fact_six
 
   
 
