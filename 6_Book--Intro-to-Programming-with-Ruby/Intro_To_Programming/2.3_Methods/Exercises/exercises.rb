@@ -9,6 +9,8 @@ end
 
 greeting("Zaphod")
 
+#============================================================
+
 # What do the following expressions evaluate to?
 puts "=================="
 puts "Q2"
@@ -29,3 +31,21 @@ puts "4. four = 'four'  =>  'four'"
 # 5. print something = "nothing"
 puts "5. print something = 'nothing'  =>  nil"
 
+
+#============================================================
+
+# What will the following code print to the screen?
+
+puts "=================="
+puts "Q3"
+puts "------------------"
+
+def scream(words)
+  words = words + "!!!!"
+  return
+  puts words
+end
+
+scream("Yippeee")
+
+puts "scream('Yippeee')  =>  nil"
