@@ -1,8 +1,0 @@
-#                   Chaining Methods
-puts "====================="
-
-def add_four(n) 
-  n + 4
-end
-
-add_four(4).times { puts 'this should print 8 times'}
