@@ -33,3 +33,4 @@ def add_six(n)
 end
 
 add_six(8).times { puts 'this will work'}
+# this works because the method is no longer returning the puts expression which has a nil value.
