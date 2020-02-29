@@ -36,6 +36,9 @@ puts "5. print something = 'nothing'  =>  nil"
 
 # What will the following code print to the screen?
 
+# Follow-up question (5):
+# 1) Edit the method definition in exercise #4 so that it does print words on the screen. 2) What does it return now?
+
 puts "=================="
 puts "Q3"
 puts "------------------"
@@ -48,4 +51,4 @@ end
 
 scream("Yippeee")
 
-puts "scream('Yippeee')  =>  nil"
+puts "scream('Yippeee')  =>  doesn't print anything due to return keyword before puts statement"
