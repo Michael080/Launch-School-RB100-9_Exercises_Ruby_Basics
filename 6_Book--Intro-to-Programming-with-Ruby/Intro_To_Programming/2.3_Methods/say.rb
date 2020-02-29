@@ -5,7 +5,7 @@
 
 # or as a method:
 
-def say(words)
+def say(words ='hello')
   puts words + '.'
 end
 
