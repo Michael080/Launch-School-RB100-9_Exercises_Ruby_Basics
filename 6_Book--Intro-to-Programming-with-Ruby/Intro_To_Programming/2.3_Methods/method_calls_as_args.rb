@@ -19,5 +19,5 @@ end
 puts multiply(add(20, 45), subtract(80, 10))
 
 # a more complex example
-puts add(subtract(80, 10), multiply(add(20, 45), subtract(80, 10)))
+puts add(subtract(80, 10), multiply(add(30, 5), subtract(20, 6)))
 
