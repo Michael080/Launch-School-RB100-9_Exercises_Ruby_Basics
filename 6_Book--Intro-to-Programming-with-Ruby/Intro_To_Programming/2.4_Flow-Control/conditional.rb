@@ -10,3 +10,7 @@ elsif a == 4
 else
   puts "a is neither 3, nor 4"
 end
+
+# one-line syntax
+
+if x == 3 then puts "x is 3" end
