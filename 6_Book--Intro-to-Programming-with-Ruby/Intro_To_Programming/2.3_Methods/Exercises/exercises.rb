@@ -34,6 +34,18 @@ puts "5. print something = 'nothing'  =>  nil"
 
 #============================================================
 
+#Write a program that includes a method called multiply that takes two arguments and returns the product of the two numbers.
+
+puts "=================="
+puts "Q3"
+puts "------------------"
+
+def multiply(num1, num2)
+  result = num1 * num2
+end
+
+#============================================================
+
 # What will the following code print to the screen?
 
 puts "=================="
