@@ -6,7 +6,7 @@
 # or as a method:
 
 def say(words)
-  puts words
+  puts words + '.'
 end
 
 say("hello")
