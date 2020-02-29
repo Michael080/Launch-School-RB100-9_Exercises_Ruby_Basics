@@ -22,3 +22,14 @@ add_four(4).times { puts 'this should print 8 times'}
 #this method call produces error:
 #'undefined method 'times' for nil:NilClass
 #this is because 'puts n + 5' is a nil value
+
+
+# similar to add_five but w/ a new expression as the last line of the method
+
+def add_six(n)
+  new_value = n + 6
+  puts new_value
+  new_value
+end
+
+add_six(8).times { puts 'this will work'}
