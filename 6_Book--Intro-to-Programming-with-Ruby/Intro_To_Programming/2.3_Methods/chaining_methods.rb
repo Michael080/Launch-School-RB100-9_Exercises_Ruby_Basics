@@ -16,4 +16,4 @@ def add_five(n)
   puts n + 5
 end
 
-add_four(8).times { puts 'will this work?'}
+add_five(8).times { puts 'will this work?'}
