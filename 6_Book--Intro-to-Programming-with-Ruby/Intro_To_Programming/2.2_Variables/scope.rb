@@ -1,3 +1,4 @@
+# from: https://launchschool.com/books/ruby/read/variables
 #scope.rb
 
 a = 5           # variable is initialized in the outer scope
