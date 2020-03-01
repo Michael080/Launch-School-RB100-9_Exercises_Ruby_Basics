@@ -32,3 +32,25 @@ end
 
 puts cap_ten("blammo")
 puts cap_ten("Incredibly very too long string")
+
+
+# Write a program that takes a number from the user between 0 and 100 and reports back whether the number is between 0 and 50, 51 and 100, or above 100.
+
+puts "======================
+3."
+
+puts "Please enter a number:"       #Request number from user
+user_number = gets.chomp.to_i            #Save input to 'user_number'
+
+def find_range(user_number)
+ if user_number <= 50
+  range = "Your number is in this range: 1 - 50"
+ elsif user_number <= 100
+  range = "Your number is in this range: 51 - 100"
+ else 
+  range = "Your number is in this range: 101 - infinity"
+ end
+end
+
+puts find_range(user_number)
+
