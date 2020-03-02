@@ -33,3 +33,9 @@ puts "returns modified 'b':
 puts "&..."
 puts "removes:
 [1, 2, 3] of ['b', [1, 2, 3]"
+
+
+#How do you return the word "example" from the
+# following array?
+
+arr = [["test", "hello", "world"],["example", "mem"]]
