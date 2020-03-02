@@ -11,3 +11,20 @@ end
 puts "The each method returns the value of
 each element of the array + 1"
 puts "=> 2, 3, 4, 5, 6"
+
+
+# Write a while loop that takes input from the user,
+# performs an action, and only stops when the user
+# types "STOP". Each loop can get info from the user.
+puts "=============
+2.)"
+
+def there_yet()
+  response = ""
+  while response != "STOP"
+    puts "Are we there yet?"
+    response = gets.chomp
+  end
+end
+
+there_yet()
