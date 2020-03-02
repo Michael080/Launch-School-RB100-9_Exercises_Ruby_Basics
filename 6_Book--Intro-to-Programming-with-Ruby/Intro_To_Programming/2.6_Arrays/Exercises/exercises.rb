@@ -14,9 +14,9 @@ puts "======================="
 
 a = ["b", "a"]
 a = a.product(Array(1..3))
-puts a.first.delete(a.first.last)
+a.first.delete(a.first.last)
 
-puts "returns:
+puts "returns modified 'a':
 ['b', 1], ['b', 2], ['b', 3] etc,."
 puts "&..."
 puts "removes:
@@ -24,7 +24,12 @@ puts "removes:
 
 puts "------------------------"
 
-# b = ["b", "a"]
-# arr = arr.product([Array(1..3)])
+b = ["b", "a"]
+b = b.product([Array(1..3)])
+b.first.delete(b.first.last)
 
-# arr.first.delete(arr.first.last)
+puts "returns modified 'b':
+[['b', [1, 2, 3]], [a, [1, 2, 3]]]"
+puts "&..."
+puts "removes:
+[1, 2, 3] of ['b', [1, 2, 3]"
