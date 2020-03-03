@@ -1,7 +1,7 @@
 # Below we have given you an array and a number.
 # Write a program that checks to see if the
 # number appears in the array.
-
+puts "1.)"
 arr = [1, 3, 5, 7, 9, 11]
 number = 3
 
@@ -10,7 +10,8 @@ puts arr.include?(number)
 
 # What will the following programs return? What
 # is the value of arr after each?
-puts "======================="
+puts "=======================
+2.)"
 
 a = ["b", "a"]
 a = a.product(Array(1..3))
@@ -37,5 +38,10 @@ puts "removes:
 
 #How do you return the word "example" from the
 # following array?
+puts "=======================
+3.)"
 
 arr = [["test", "hello", "world"],["example", "mem"]]
+
+#ANSWER
+puts arr.first[1]
