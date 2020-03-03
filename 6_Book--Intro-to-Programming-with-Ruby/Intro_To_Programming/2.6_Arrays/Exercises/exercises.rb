@@ -44,4 +44,13 @@ puts "=======================
 arr = [["test", "hello", "world"],["example", "mem"]]
 
 #ANSWER
-puts arr.first[1]
+puts arr.last[0]
+
+
+# Use the each_with_index method to iterate through
+# an array of your creation that prints each index
+# and value of the array.
+
+arrayish = ["What", "a", "dope", "array", "bro", "!"]
+
+arrayish.each_with_index { |value, id| puts "#{id+1}) #{value}" }
