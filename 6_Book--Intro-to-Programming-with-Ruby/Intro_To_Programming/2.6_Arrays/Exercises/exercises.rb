@@ -77,6 +77,28 @@ puts "string[6] =>  'e'"
 puts "string[11] =>  'A'"
 puts "string[19] =>  'nil'"
 
+#===================================================
+puts "=======================
+6.)"
+# You run the following code.
+
+names = ['bob', 'joe', 'susan', 'margaret']
+names['margaret'] = 'jody'
+
+#...and get the following error message:
+
+# TypeError: no implicit conversion of String into Integer
+# from (irb):2:in `[]='
+#   from (irb):2
+#   from /Users/username/.rvm/rubies/ruby-2.0.0-p353/bin/irb:12:in `<main>'
+
+# What is the problem and how can it be fixed?
+
+puts "The problem is that names['margaret'] is attempting to slice the array
+using a string value. The above code can be refactored as follows:
+names[3] = 'jody'"
+
+
 # Use the each_with_index method to iterate through
 # an array of your creation that prints each index
 # and value of the array.
