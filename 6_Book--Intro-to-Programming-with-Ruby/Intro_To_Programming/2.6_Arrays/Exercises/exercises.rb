@@ -63,6 +63,20 @@ puts "=>  error!"
 arr[5]
 puts "=>  8"
 
+
+# # What is the value of a, b, and c in the following program?
+puts "=======================
+5.)"
+
+string = "Welcome to America!"
+a = string[6]
+b = string[11]
+c = string[19]
+
+puts "string[6] =>  'e'"
+puts "string[11] =>  'A'"
+puts "string[19] =>  'nil'"
+
 # Use the each_with_index method to iterate through
 # an array of your creation that prints each index
 # and value of the array.
