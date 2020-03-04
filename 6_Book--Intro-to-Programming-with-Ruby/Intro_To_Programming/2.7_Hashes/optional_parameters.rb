@@ -9,3 +9,5 @@ end
 
 greeting("Bob")
 greeting("Bob", {age: 62, city: "New York City"})
+# Arguments can also be passed in w/out curly braces:
+greeting("Bob", age: 62, city: "New York City")
