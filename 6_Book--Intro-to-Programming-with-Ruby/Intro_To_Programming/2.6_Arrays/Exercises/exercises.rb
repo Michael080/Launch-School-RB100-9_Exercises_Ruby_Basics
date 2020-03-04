@@ -122,7 +122,7 @@ puts "=======================
 
 temp_arr =[1, 2, 3, 4]
 
-mutant = temp_arr.map { |a| a*4}
+mutant = temp_arr.map { |a| (a+2)}
 
 puts "#{mutant}"
 
