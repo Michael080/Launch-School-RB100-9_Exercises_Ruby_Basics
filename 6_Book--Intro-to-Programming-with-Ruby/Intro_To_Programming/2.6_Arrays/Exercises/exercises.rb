@@ -51,7 +51,7 @@ puts arr.last[0]
 # an array of your creation that prints each index
 # and value of the array.
 puts "=======================
-4.)"
+7.)"
 
 arrayish = ["What", "a", "dope", "array", "bro", "!"]
 
@@ -66,7 +66,7 @@ arrayish.each_with_index { |value, id| puts "#{id + 1}) #{value}" }
 # both arrays to the screen using the p method instead
 # of puts.
 puts "=======================
-5.)"
+8.)"
 
 temp_arr =[1, 2, 3, 4]
 
