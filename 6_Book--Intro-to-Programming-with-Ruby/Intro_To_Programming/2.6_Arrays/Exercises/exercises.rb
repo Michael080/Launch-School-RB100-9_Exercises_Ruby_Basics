@@ -47,6 +47,22 @@ arr = [["test", "hello", "world"], ["example", "mem"]]
 puts arr.last[0]
 
 
+# What does each method return in the following example?
+puts "=======================
+4.)"
+
+arr = [15, 7, 18, 5, 12, 8, 5, 1]
+
+#1.)
+arr.index(5)
+puts "=>  3"
+#2.)
+arr.index[5]
+puts "=>  error!"
+#3.)
+arr[5]
+puts "=>  8"
+
 # Use the each_with_index method to iterate through
 # an array of your creation that prints each index
 # and value of the array.
