@@ -3,9 +3,9 @@
 
 name_and_age = {"Bob" => 42, "Steve" => 31, "Joe" => 19}
 
-name_and_age.has_key?("Steve")    # =>  true
+puts name_and_age.has_key?("Steve")    # =>  true
 
-name_and_age.has_key?("Larry")    # =>  false
+# name_and_age.has_key?("Larry")    # =>  false
 
 
 # -----------------------------------------------------------
@@ -27,7 +27,7 @@ name_and_age.select { |k,v| (k == "Bob") || (v == 19) }
 
 # Pass a given key and returns value for that key
 
-name_and_age.fetch("Steve")   # => 31
+puts name_and_age.fetch("Steve")   # => 31
 
 name_and_age.fetch("Larry")  # => "error msg"
 
