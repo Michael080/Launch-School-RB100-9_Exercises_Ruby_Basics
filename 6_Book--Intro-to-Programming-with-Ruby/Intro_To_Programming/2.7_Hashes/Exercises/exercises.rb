@@ -12,3 +12,13 @@ family = {  uncles: ["bob", "joe", "steve"],
 # Using fetch()
 # atomic_fam = family.fetch_values(:sisters, :brothers).to_a
 # puts "#{atomic_fam}"
+
+# ANSWER
+atomic_fam = family.select { |k,v| (k == :sisters) || (k == :brothers)}.to_a
+# Delete ':sisters' hash key from array
+atomic_fam.first.shift
+# Delete ':brothers' hash key from array
+atomic_fam.last.shift
+# Remove nesting (flatten)
+atomic_fam.flatten!
+
