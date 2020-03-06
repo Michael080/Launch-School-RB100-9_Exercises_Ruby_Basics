@@ -110,3 +110,18 @@ puts "-----------------------------------------------------
 person = {name: 'Bob', occupation: 'web developer', hobbies: 'painting'}
 
 person.fetch(:name)
+
+
+# What method could you use to find out if a Hash contains a
+# specific value in it? Write a program to demonstrate this
+# use.
+puts "-----------------------------------------------------
+4.)"
+
+# Method that returns specific value from a hash
+def value_check(hash, value)
+  hash.select { |k,v| v == value}
+end
+
+# Check 'person' for value: 'web developer'
+value_check(person, 'web developer')
