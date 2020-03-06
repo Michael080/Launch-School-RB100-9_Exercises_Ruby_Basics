@@ -100,3 +100,13 @@ print_keys(droogs)
 print_values(droogs)
 
 print_both(droogs)
+
+
+puts "-----------------------------------------------------
+4.)"
+# Given the following expression, how would you access the
+#  name of the person?
+
+person = {name: 'Bob', occupation: 'web developer', hobbies: 'painting'}
+
+person.fetch(:name)
