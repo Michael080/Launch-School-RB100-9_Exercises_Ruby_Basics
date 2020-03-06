@@ -49,3 +49,54 @@ mighty_hash.merge(hashy_hash)
 # merge!
 mighty_hash.merge!(hashy_hash)
 
+
+# Using some of Ruby's built-in Hash methods, write a 
+# program that loops through a hash and prints all of the 
+# keys. Then write a program that does the same thing 
+# except printing the values. Finally, write a program that 
+# prints both.
+puts "-----------------------------------------------------
+3.)"
+
+droogs = {
+    Alex: {
+        age: 15,
+        interests: 'Ludwig Van, ultra-violence, and Moloko',
+        quote: 'I see what is right and approve, but I do what is wrong'
+    },
+    Dim: {
+        iq: 30,
+        interests: 'unknown',
+        preffered_moloko: 'Drencrom',
+        quote: "I don't like you should do what you done and I'm not your
+brother no more and wouldn't want to be"
+    }
+}
+
+def print_keys(hash)
+  hash.each do |keys|
+    puts "Printing keys:
+#{keys}"
+  end
+end
+
+def print_values(hash)
+  hash.each do |keys, values|
+    puts "Printing values:
+#{values}"
+  end
+end
+
+def print_both(hash)
+  hash.each do |keys, values|
+    puts "Printing keys & values:
+#{keys}: #{values}"
+  end
+end
+
+
+print_keys(droogs)
+
+print_values(droogs)
+
+print_both(droogs)
