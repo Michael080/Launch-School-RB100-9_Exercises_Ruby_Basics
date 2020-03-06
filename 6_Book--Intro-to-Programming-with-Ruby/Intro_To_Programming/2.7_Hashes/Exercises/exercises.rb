@@ -101,7 +101,7 @@ print_values(droogs)
 
 print_both(droogs)
 
-
+#==========================================================
 puts "-----------------------------------------------------
 4.)"
 # Given the following expression, how would you access the
@@ -125,3 +125,18 @@ end
 
 # Check 'person' for value: 'web developer'
 value_check(person, 'web developer')
+
+#==========================================================
+puts "-----------------------------------------------------
+5.)"
+# Given the following code...
+
+x = "hi there"
+my_hash = {x: "some value"}
+my_hash2 = {x => "some value"}
+
+# What's the difference between the two hashes that were created?
+
+puts "the key-name for my_hash doesn't use the value for var x,
+where the key-name for my_hash2 does."
+
