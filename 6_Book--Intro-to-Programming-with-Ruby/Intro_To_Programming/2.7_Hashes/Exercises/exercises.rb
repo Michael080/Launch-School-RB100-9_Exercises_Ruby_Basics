@@ -116,7 +116,7 @@ person.fetch(:name)
 # specific value in it? Write a program to demonstrate this
 # use.
 puts "-----------------------------------------------------
-4.)"
+5.)"
 
 # Method that returns specific value from a hash
 def value_check(hash, value)
@@ -128,7 +128,7 @@ value_check(person, 'web developer')
 
 #==========================================================
 puts "-----------------------------------------------------
-5.)"
+6.)"
 # Given the following code...
 
 x = "hi there"
@@ -140,3 +140,14 @@ my_hash2 = {x => "some value"}
 puts "the key-name for my_hash doesn't use the value for var x,
 where the key-name for my_hash2 does."
 
+
+#==========================================================
+puts "-----------------------------------------------------
+7.)"
+
+# If you see this error, what do you suspect is the most
+# likely problem?
+
+#NoMethodError: undefined method `keys' for Array
+
+puts "B - There is no method called 'keys' for Array objects"
