@@ -164,27 +164,23 @@ words = ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
 # ["demo", "dome", "mode"]
 # ["neon", "none"]
 
-# ACTUAL FIRST STEP:
-# Split each word into individual characters
-
-# 1) Loop over array:
-
 # 3) Check letters and return boolean true if (match is found)
 def anagrammer(word_1, word_2)
   # Split word_1 and word_2 into individual characters
   anagrams = []
   word = word_1.split('')
-  next_word= word_2.split('')
-  complete = word.length - 1
+  following_word = word_2.split('')
+  complete = word.length - 1  # Value for checking completion of loop
   for i in 0..(complete) do
     current_char = word_1[i]
     matches = 0 # track number of matches
-    if (char_check(current_char, next_word) == false)
+    if char_check(current_char, following_word) == false
       return
     else
       check_complete?(i, complete)? (anagrams += [word_1, word_2]) : next
     end
     return anagrams
+    puts "Anagrams (from anagrammer()): #{anagrams}"
   end
   # if (i == word_2.length) && (matches != word_2.length)
   #   return
@@ -208,7 +204,7 @@ def char_check(character, word)
   end
   if i == word.length - 1
     if (i == word.length - 1) && (matches != word.length)
-      puts "No matches for #{character}"
+      # puts "No matches for #{character}"
       return false
     else
       return true
@@ -216,22 +212,31 @@ def char_check(character, word)
   end
 end
 
+# 1) Loop over array:
+for i in 1..(words.length-2) do
+  check = words[i]
+  against = words[i+1]
+  puts "Value of 'against' from main-loop: #{against}"
+  anagrams = []   # Match cases go here
+  anagrammer(check, against) == nil ? next : (anagrams += anagrammer(check, against))
+end
+print anagrams
 # !Match
-test1 = words[0]
-test2 = words[1]
-anagrammer(test1, test2)
-
-# Match
-test3 = words[3]
-test4 = words[6]
-anagrammer(test3, test4)
-
-# Create array of matches
-anagram = []
-anagrammer(test3, test4)
-
-anagrammer(test1, test2)? anagram+=anagrammer(test1, test2) : (puts "'#{test1}' is not an anagram of '#{test2}'")
-anagrammer(test3, test4)? anagram+=[anagrammer(test3, test4)] : (puts "'#{test3}' is not an anagram of '#{test4}'")
+# test1 = words[0]
+# test2 = words[1]
+# anagrammer(test1, test2)
+#
+# # Match
+# test3 = words[3]
+# test4 = words[6]
+# anagrammer(test3, test4)
+#
+# # Create array of matches
+# anagram = []
+# anagrammer(test3, test4)
+#
+# anagrammer(test1, test2)? anagram+=anagrammer(test1, test2) : (puts "'#{test1}' is not an anagram of '#{test2}'")
+# anagrammer(test3, test4)? anagram+=[anagrammer(test3, test4)] : (puts "'#{test3}' is not an anagram of '#{test4}'")
 
 # 2) Stop @ next item:
 # 4) Check letters and return boolean false if (match is not found)
