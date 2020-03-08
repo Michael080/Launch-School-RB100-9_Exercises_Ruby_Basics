@@ -173,14 +173,13 @@ words = ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
 def anagrammer(word_1, word_2)
   # Split word_1 and word_2 into individual characters
   anagrams = []
-  word_1 = word_1.split('')
-  word_2 = word_2.split('')
-  complete = word_2.length - 1
-  # !!! NEED to ONLY add to anagrams array when check is complete
+  word = word_1.split('')
+  next_word= word_2.split('')
+  complete = word.length - 1
   for i in 0..(complete) do
     current_char = word_1[i]
     matches = 0 # track number of matches
-    if (char_check(current_char, word_2) == false)
+    if (char_check(current_char, next_word) == false)
       return
     else
       check_complete?(i, complete)? (anagrams += [word_1, word_2]) : next
@@ -232,7 +231,7 @@ anagram = []
 anagrammer(test3, test4)
 
 anagrammer(test1, test2)? anagram+=anagrammer(test1, test2) : (puts "'#{test1}' is not an anagram of '#{test2}'")
-anagrammer(test3, test4)? anagram+=anagrammer(test3, test4) : (puts "'#{test3}' is not an anagram of '#{test4}'")
+anagrammer(test3, test4)? anagram+=[anagrammer(test3, test4)] : (puts "'#{test3}' is not an anagram of '#{test4}'")
 
 # 2) Stop @ next item:
 # 4) Check letters and return boolean false if (match is not found)
