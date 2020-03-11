@@ -177,13 +177,16 @@ def anagrammer(word_1, word_2)
   for i in 0..(complete) do
     current_char = word_1[i]
     matches = 0 # track number of matches
-    if char_check(current_char, following_word) == false  # Check for matching letters
-      return
-    else
-      # Check state of loop & Add confirmed anagrams to array
-      # !!! use push method to add words
-      check_complete?(i, complete) ? (anagrams += [word_1, word_2]) : next
-    end
+
+    char_check(current_char, following_word) ?
+    # if char_check(current_char, following_word) == false  # Check for matching letters
+    #   return
+    # else
+    #   # Check state of loop & Add confirmed anagrams to array
+    #   # !!! use push method to add words
+    #   # check_complete?(i, complete) ? (anagrams += [word_1, word_2]) : next
+    #
+    # end
     # puts "Anagrams (from anagrammer()): #{anagrams}"
   end
 end
@@ -192,6 +195,18 @@ end
 # RETURNS true if ALL characters have been compared
 def check_complete?(i, complete)
   i == complete ? true : false
+end
+
+# define method that confirms ALL letters match
+# RETURNS bool value
+def match_complete?()
+  if check_complete?(i, complete)
+    if check_complete?(i, complete) && (matches != word.length)
+      return false
+    else
+      return true
+    end
+  end
 end
 
 # define method that takes one character and compares it to
@@ -207,15 +222,6 @@ def char_check(character, word)
     if character == word[i]
       word.delete_at(i)
       matches+=1
-    end
-  end
-  # !!! Change word.length -1 to 'complete'
-  if check_complete?(i, complete)
-    # !!! Change word.length -1 to 'complete'
-    if check_complete?(i, complete) && (matches != word.length)
-      return false
-    else
-      return true
     end
   end
 end
