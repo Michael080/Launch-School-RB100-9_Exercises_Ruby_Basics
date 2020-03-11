@@ -210,9 +210,9 @@ def char_check(character, word)
     end
   end
   # !!! Change word.length -1 to 'complete'
-  if i == complete
+  if check_complete?(i, complete)
     # !!! Change word.length -1 to 'complete'
-    if (i == complete) && (matches != word.length)
+    if check_complete?(i, complete) && (matches != word.length)
       return false
     else
       return true
