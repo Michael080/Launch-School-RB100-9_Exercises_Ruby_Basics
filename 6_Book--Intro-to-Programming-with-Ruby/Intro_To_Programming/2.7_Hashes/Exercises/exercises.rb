@@ -201,7 +201,7 @@ def char_check(character, word)
   # !!! move matches declaration outside of method
   # matches = 0
   # !!! Change word.length -1 to 'complete'
-  for i in 0..(word.length - 1) do
+  for i in 0..(complete) do
     # check for matching characters
     # (character == word[i]) ? word.delete_at(i) : false
     if character == word[i]
@@ -210,9 +210,9 @@ def char_check(character, word)
     end
   end
   # !!! Change word.length -1 to 'complete'
-  if i == word.length - 1
+  if i == complete
     # !!! Change word.length -1 to 'complete'
-    if (i == word.length - 1) && (matches != word.length)
+    if (i == complete) && (matches != word.length)
       return false
     else
       return true
