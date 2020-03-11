@@ -169,16 +169,29 @@ words = ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
 # 3) Check letters and return boolean true if (match is found)
 def anagrammer(word_1, word_2)
   # Split word_1 and word_2 into individual characters
-  anagrams = []
   word = word_1.split('')
   # binding.pry
   following_word = word_2.split('')
+  current_set = [word_1, word_2]
   complete = word.length - 1  # Value for checking completion of loop
   for i in 0..(complete) do
     current_char = word_1[i]
     matches = 0 # track number of matches
 
-    char_check(current_char, following_word) ?
+    if (char_check(current_char, following_word))
+      word.delete_at(i)
+      matches+=1
+    else
+      return
+    end
+
+    match_complete? ? return current_set : next
+    # if (!char_check(current_char, following_word))
+    #   return
+    # elsif match_complete?
+
+    # end
+
     # if char_check(current_char, following_word) == false  # Check for matching letters
     #   return
     # else
@@ -197,9 +210,10 @@ def check_complete?(i, complete)
   i == complete ? true : false
 end
 
+
 # define method that confirms ALL letters match
 # RETURNS bool value
-def match_complete?()
+def match_complete?
   if check_complete?(i, complete)
     if check_complete?(i, complete) && (matches != word.length)
       return false
@@ -219,9 +233,7 @@ def char_check(character, word)
   for i in 0..(complete) do
     # check for matching characters
     # (character == word[i]) ? word.delete_at(i) : false
-    if character == word[i]
-      word.delete_at(i)
-      matches+=1
+    character == word[i] ? true : false
     end
   end
 end
