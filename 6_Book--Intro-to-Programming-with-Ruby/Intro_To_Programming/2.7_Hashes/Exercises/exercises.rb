@@ -1,3 +1,4 @@
+require 'pry'
 # Given a hash of family members, with keys as the title
 # and an array of names as the values, use Ruby's built-in
 # select method to gather only immediate family members'
@@ -16,7 +17,8 @@ family = {  uncles: ["bob", "joe", "steve"],
 
 # ANSWER
 atomic_fam = family.select { |k, v| (k == :sisters) || (k == :brothers) }.to_a
-# Delete ':sisters' hash key from array
+# Delete ':sisters' hash
+# key from array
 atomic_fam.first.shift
 # Delete ':brothers' hash key from array
 atomic_fam.last.shift
@@ -155,7 +157,7 @@ puts "-----------------------------------------------------
 words = ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
          'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
          'flow', 'neon']
-
+# end = length - 1
 # Write a program that prints out groups of words that are
 # anagrams. Anagrams are words that have the same exact
 # letters in them but in a different order. Your output
@@ -169,29 +171,31 @@ def anagrammer(word_1, word_2)
   # Split word_1 and word_2 into individual characters
   anagrams = []
   word = word_1.split('')
+  # binding.pry
   following_word = word_2.split('')
   complete = word.length - 1  # Value for checking completion of loop
   for i in 0..(complete) do
     current_char = word_1[i]
     matches = 0 # track number of matches
-    if char_check(current_char, following_word) == false
+    if char_check(current_char, following_word) == false  # Check for matching letters
       return
     else
-      check_complete?(i, complete)? (anagrams += [word_1, word_2]) : next
+      # Check state of loop & Add confirmed anagrams to array
+      check_complete?(i, complete) ? (anagrams += [word_1, word_2]) : next
     end
-    return anagrams
-    puts "Anagrams (from anagrammer()): #{anagrams}"
+    # puts "Anagrams (from anagrammer()): #{anagrams}"
   end
-  # if (i == word_2.length) && (matches != word_2.length)
-  #   return
-  # else
-  # end
 end
 
+# define method that checks the status of the loop
+# RETURNS true if ALL characters have been compared
 def check_complete?(i, complete)
   i == complete ? true : false
 end
 
+# define method that takes one character and compares it to
+# entire word
+# RETURNS true if match
 def char_check(character, word)
   matches = 0
   for i in 0..(word.length - 1) do
@@ -204,7 +208,6 @@ def char_check(character, word)
   end
   if i == word.length - 1
     if (i == word.length - 1) && (matches != word.length)
-      # puts "No matches for #{character}"
       return false
     else
       return true
@@ -212,15 +215,19 @@ def char_check(character, word)
   end
 end
 
-# 1) Loop over array:
-for i in 1..(words.length-2) do
-  check = words[i]
-  against = words[i+1]
-  puts "Value of 'against' from main-loop: #{against}"
-  anagrams = []   # Match cases go here
-  anagrammer(check, against) == nil ? next : (anagrams += anagrammer(check, against))
+anagrams = Array.new   # Match cases go here
+
+# 1) Loop over array
+words.each_index do |index|
+  puts words[index]
+  puts "Value of 'words[i+1]' from main-loop: #{words[index+1]}"
+  if index < (words.length - 2)
+    anagrammer(words[index], words[index+1]) == nil ? next : (puts anagrams.push(anagrammer(words[index], words[index+1])))
+  else
+    return anagrams
+  end
 end
-print anagrams
+puts "done bitch"
 # !Match
 # test1 = words[0]
 # test2 = words[1]
