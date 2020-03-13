@@ -25,12 +25,7 @@ def char_check(word_1, word_2, template_length)
     sample = char
     word_2.each do |char|
       puts "#{sample} : #{char}"
-      # !!! May need to embed conditions in 'elsif' and 'else' w/in this if loop
-      # * It looks like this first condition is not being tested before the loop
-      # breaks
-      if (array.length == template_length)
-        return true
-      elsif (sample == char)
+      if (sample == char)
         array.push(char)
         puts "$iterator:#{$iterator}  char:#{char}"
         word_2.delete_at($iterator)
@@ -41,6 +36,10 @@ def char_check(word_1, word_2, template_length)
       end
     end
   end
+  # Check that the number of matches implies an anagram
+  if (array.length == template_length)
+    return true
+    end
 end
 
 # Test char_check returns true when passed anagrams:
