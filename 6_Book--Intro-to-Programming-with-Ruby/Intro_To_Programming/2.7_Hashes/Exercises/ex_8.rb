@@ -2,14 +2,29 @@ words = ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
          'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
          'flow', 'neon']
 
-word_1 = words[4]
-word_2 = words[5]
-word_1_temp = words[4].split("")
-word_2_temp = words[5].split("")
+word_1 = words[0]
+word_2 = words[1]
+word_1_temp = words[6].split("")
+word_2_temp = words[11].split("")
 
 anagrams = []
 template_length = word_2.length
 $iterator = 0
+temp_chars = {}
+
+# Method that splits takes array indices as arguments and returns the words split into individual
+# characters for easy comparing and checks that they are valid 'anagram candidates' by checking that they
+# are of equal length
+def valid_length(word_1, word_2)
+  word_1.length == word_2.length ? true : false
+end
+
+# Split words into individual characters and assign to new hash for comparing
+def validator(word_1, word_2)
+  temp_chars[:word_1_temp] = words[i].split('')
+  temp_chars[:word_2_temp] = words[i+1].split('')
+  return temp_chars
+end
 
 # !!! Need to use 'Character Loop' in a method
 # which will be called in 'Main Loop'
@@ -19,7 +34,7 @@ $iterator = 0
 
 # Character Loop-Method
 # First loop iterates over characters of word_1 ('sample'), while the second loop iterates
-# over word_2 ('char'), and checks one at a time, each 'sample' agains all 'char's and then
+# over word_2 ('char'), and checks one at a time, each 'sample' against all 'char's and then
 # moves on to the next instance of 'sample'.
 def char_check(word_1, word_2, template_length)
   matches = [] # array for containing matching characters from word_2 ('char')
