@@ -10,7 +10,6 @@ word_2_temp = words[11].split("")
 anagrams = []
 template_length = word_2.length
 $iterator = 0
-temp_chars = {}
 
 # Method that splits takes array indices as arguments and returns the words split into individual
 # characters for easy comparing and checks that they are valid 'anagram candidates' by checking that they
@@ -20,11 +19,18 @@ def valid_length(word_1, word_2)
 end
 
 # Split words into individual characters and assign to new hash for comparing
-def validator(word_1, word_2)
-  temp_chars[:word_1_temp] = words[i].split('')
-  temp_chars[:word_2_temp] = words[i+1].split('')
-  return temp_chars
+chars = {}
+
+def validator(word_1, word_2, chars)
+  chars[:word_1_temp] = word_1.split('')
+  chars[:word_2_temp] = word_2.split('')
+  return chars
 end
+
+validator(words[i], words[i+1], chars)
+
+# Call validator
+validator(words[i], words[i+1])
 
 # !!! Need to use 'Character Loop' in a method
 # which will be called in 'Main Loop'
