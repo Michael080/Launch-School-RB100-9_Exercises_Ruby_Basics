@@ -18,8 +18,11 @@ $iterator = 0
 #   * Will definitely return what is now called 'array' (for checking number of matches)
 
 # Character Loop-Method
+# First loop iterates over characters of word_1 ('sample'), while the second loop iterates
+# over word_2 ('char'), and checks one at a time, each 'sample' agains all 'char's and then
+# moves on to the next instance of 'sample'.
 def char_check(word_1, word_2, template_length)
-  matches = []
+  matches = [] # array for containing matching characters from word_2 ('char')
   # Character loop
   word_1.each do |char|
     sample = char
@@ -27,19 +30,16 @@ def char_check(word_1, word_2, template_length)
       puts "#{sample} : #{char}"
       if (sample == char)
         matches.push(char)
-        puts "$iterator:#{$iterator}  char:#{char}"
+        # puts "$iterator:#{$iterator}  char:#{char}"
         word_2.delete_at($iterator)
         $iterator += 1
       else
         $iterator += 1
-        # break
       end
     end
   end
   # Check that the number of matches implies an anagram
-  if (matches.length == template_length)
-    return true
-    end
+  matches.length == template_length ? true : false
 end
 
 # Test char_check returns true when passed anagrams:
