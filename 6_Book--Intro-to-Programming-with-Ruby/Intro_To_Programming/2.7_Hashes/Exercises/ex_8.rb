@@ -27,10 +27,8 @@ def validator(word_1, word_2, chars)
   return chars
 end
 
-validator(words[i], words[i+1], chars)
-
 # Call validator
-validator(words[i], words[i+1])
+validator(words[i], words[i+1], chars)
 
 # !!! Need to use 'Character Loop' in a method
 # which will be called in 'Main Loop'
