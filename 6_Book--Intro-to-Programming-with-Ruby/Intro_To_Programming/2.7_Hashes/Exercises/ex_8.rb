@@ -17,6 +17,8 @@ $iterator = 0
 def valid_length(word_1, word_2)
   word_1.length == word_2.length ? true : false
 end
+# HOW TO: Call valid_length
+# valid_length(word[i], word[i+1])
 
 # Split words into individual characters and assign to new hash for comparing
 chars = {}
@@ -26,9 +28,8 @@ def validator(word_1, word_2, chars)
   chars[:word_2_temp] = word_2.split('')
   return chars
 end
-
-# Call validator
-validator(words[i], words[i+1], chars)
+# HOW TO: Call validator
+# validator(words[i], words[i+1], chars)
 
 # !!! Need to use 'Character Loop' in a method
 # which will be called in 'Main Loop'
