@@ -2,8 +2,8 @@ words = ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
          'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
          'flow', 'neon']
 
-word_1 = words[0]
-word_2 = words[1]
+# word_1 = words[0]
+# word_2 = words[1]
 word_1_temp = words[6].split("")
 word_2_temp = words[11].split("")
 
@@ -59,26 +59,20 @@ def char_check(word_1, word_2, template_length)
     end
   end
   # Check that the number of matches implies an anagram
-  matches.length == template_length ? true : false
+  # !!! May not need this line here as valid_length() performs same
+  # matches.length == template_length ? true : false
 end
 
 # Test char_check returns true when passed anagrams:
-puts char_check(word_1_temp, word_2_temp, template_length)
+# puts char_check(word_1_temp, word_2_temp, template_length)
 
-# !!! error: undefined method `length' for nil:NilClass)
-# * Not sure why it produces a nilClass here
 # Main Loop
-words.each_index do |i|
+for i in 0..(words.length - 2) do
+  # puts "word1 = #{words[i]} : word2 = #{words[i+1]}"
   valid_length(words[i], words[i+1])
-  # puts words[i].length
-  # char_check(word_1, word_2)
 end
 
-# valid_length(word[i], word[i+1])
-# validator(words[i], words[i+1], chars)
-
 # array.length == word_2.length ? anagrams.push([word_1, word_2]) : (puts "Not anagrams :(")
-#
 #
 # is_anagram(word_1, word_2, array)
 
