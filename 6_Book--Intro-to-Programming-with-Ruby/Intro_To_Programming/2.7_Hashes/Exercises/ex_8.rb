@@ -4,33 +4,24 @@ words = ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
 
 word_1 = words[0]
 word_2 = words[1]
+temp_array = []
 word_1_temp = words[6].split("")
 word_2_temp = words[11].split("")
 
 anagrams = []
 chars = {}
-chars[:template_length] = word_2.length
 $iterator = 0
 
-# Method that splits takes array indices as arguments and returns the words split into individual
-# characters for easy comparing and checks that they are valid 'anagram candidates' by checking that they
-# are of equal length
-# def valid_length(word_1, word_2)
-#   word_1.length == word_2.length ? true : false
-# end
-# HOW TO: Call valid_length
-# valid_length(word[i], word[i+1])
+# Validator
+# Takes words array at index (i), temp_array, and index (i) as arguments.
+# Split words into individual characters and returns temp_array[i] for comparing
+# temp_array: {:word_1_temp, :word_2_temp}
 
-# Split words into individual characters and assign to new hash for comparing
-# chars ex: {:word_1_temp, :word_2_temp}
-
-def validator(word_1, word_2, chars)
-  chars[:word_1_temp] = word_1.split('')
-  chars[:word_2_temp] = word_2.split('')
-  return chars
+def validator(word, temp_array, i)
+  temp_array[i] = word.split('')
 end
 # HOW TO: Call validator
-# validator(words[i], words[i+1], chars)
+# validator(words[i], temp_array, i)
 
 # !!! Need to use 'Character Loop' in a method
 # which will be called in 'Main Loop'
@@ -38,12 +29,34 @@ end
 #   * Method will return the words it checked?
 #   * Will definitely return what is now called 'array' (for checking number of matches)
 
+# Check length
+# Takes output of validator(), array of characters produced by 2 words to be compared
+# and compares their lengths. If they are of the same length adds the length value to
+# 'chars' hash
+# !!! Producing ERROR
+def check_length(word_1={}, word_2={})
+  temp_1 = word_1
+  temp_2 = word_2
+  # puts temp_1.length
+  # puts temp_2.length
+  # (temp_1.length == temp_2.length) ? (chars[:template_length] = temp_1.length) : (puts "Words are not of equal length")
+  if temp_1.length == temp_2.length
+    chars[:template_length] = temp_1.length
+  else
+    puts "Not anagrams"
+  end
+end
+# HOW TO: Call check_length
+check_length({word_1_temp}, {word_2_temp})
+some_method({a:1, b:2, c:3}, "words")
+
 # Character Loop-Method
 # First loop iterates over characters of word_1 ('sample'), while the second loop iterates
 # over word_2 ('char'), and checks one at a time, each 'sample' against all 'char's and then
 # moves on to the next instance of 'sample'.
 def char_check(word_1, word_2, template_length)
   matches = [] # array for containing matching characters from word_2 ('char')
+  template_length = word_2.length
   # Character loop
   word_1.each do |char|
     sample = char
@@ -61,7 +74,7 @@ def char_check(word_1, word_2, template_length)
   end
   # Check that the number of matches implies an anagram
   # !!! May not need this line here as valid_length() performs same
-  matches.length == chars[:template_length] ? true : false
+  matches.length == template_length ? true : false
 end
 
 iterator = 1
