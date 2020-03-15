@@ -52,7 +52,6 @@ def char_check(word_1, word_2, template_length)
     end
   end
   # Check that the number of matches implies an anagram
-  # !!! May not need this line here as valid_length() performs same
   matches.length == template_length ? true : false
 end
 # HOW TO: Call char_check()
@@ -60,9 +59,7 @@ char_check(words[i], words[i+1], template_length)
 
 iterator = 1
 # Main Loop
-# !!! Need to initialize 'template length' before char_check is called
 for i in 0..(words.length - 2) do
-  temp_array = []
   template_length = words[i].length
   validator(words[i], temp_array, i)
   if char_check(temp_array[i], temp_array[i+1], template_length)
@@ -74,6 +71,3 @@ for i in 0..(words.length - 2) do
 end
 
 # array.length == word_2.length ? anagrams.push([word_1, word_2]) : (puts "Not anagrams :(")
-#
-# is_anagram(word_1, word_2, array)
-
