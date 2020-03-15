@@ -62,8 +62,9 @@ iterator = 1
 # Main Loop
 # !!! Need to initialize 'template length' before char_check is called
 for i in 0..(words.length - 2) do
+  temp_array = []
   template_length = words[i].length
-  validator(words[i], words[i+1], chars)
+  validator(words[i], temp_array, i)
   if char_check(chars[:word_1_temp], chars[:word_2_temp], chars[:template_length])
     anagrams.push([word[i], word[i+1]])
   else
