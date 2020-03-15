@@ -2,26 +2,27 @@ words = ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
          'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
          'flow', 'neon']
 
-# word_1 = words[0]
-# word_2 = words[1]
+word_1 = words[0]
+word_2 = words[1]
 word_1_temp = words[6].split("")
 word_2_temp = words[11].split("")
 
 anagrams = []
-template_length = word_2.length
+chars = {}
+chars[:template_length] = word_2.length
 $iterator = 0
 
 # Method that splits takes array indices as arguments and returns the words split into individual
 # characters for easy comparing and checks that they are valid 'anagram candidates' by checking that they
 # are of equal length
-def valid_length(word_1, word_2)
-  word_1.length == word_2.length ? true : false
-end
+# def valid_length(word_1, word_2)
+#   word_1.length == word_2.length ? true : false
+# end
 # HOW TO: Call valid_length
 # valid_length(word[i], word[i+1])
 
 # Split words into individual characters and assign to new hash for comparing
-chars = {}
+# chars ex: {:word_1_temp, :word_2_temp}
 
 def validator(word_1, word_2, chars)
   chars[:word_1_temp] = word_1.split('')
@@ -47,7 +48,7 @@ def char_check(word_1, word_2, template_length)
   word_1.each do |char|
     sample = char
     word_2.each do |char|
-      puts "#{sample} : #{char}"
+      # puts "#{sample} : #{char}"
       if (sample == char)
         matches.push(char)
         # puts "$iterator:#{$iterator}  char:#{char}"
@@ -60,16 +61,20 @@ def char_check(word_1, word_2, template_length)
   end
   # Check that the number of matches implies an anagram
   # !!! May not need this line here as valid_length() performs same
-  # matches.length == template_length ? true : false
+  matches.length == chars[:template_length] ? true : false
 end
 
-# Test char_check returns true when passed anagrams:
-# puts char_check(word_1_temp, word_2_temp, template_length)
-
+iterator = 1
 # Main Loop
+# # chars ex: {:word_1_temp, :word_2_temp}
 for i in 0..(words.length - 2) do
-  # puts "word1 = #{words[i]} : word2 = #{words[i+1]}"
-  valid_length(words[i], words[i+1])
+  validator(words[i], words[i+1], chars)
+  if char_check(chars[:word_1_temp], chars[:word_2_temp], chars[:template_length])
+    anagrams.push([word[i], word[i+1]])
+  else
+    puts "#{word[i]} and #{word[i+1]} are not anagrams"
+  end
+  puts "Anagrams: #{anagrams}"
 end
 
 # array.length == word_2.length ? anagrams.push([word_1, word_2]) : (puts "Not anagrams :(")
