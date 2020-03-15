@@ -29,27 +29,6 @@ end
 #   * Method will return the words it checked?
 #   * Will definitely return what is now called 'array' (for checking number of matches)
 
-# Check length
-# Takes output of validator(), array of characters produced by 2 words to be compared
-# and compares their lengths. If they are of the same length adds the length value to
-# 'chars' hash
-# !!! Producing ERROR
-def check_length(word_1={}, word_2={})
-  temp_1 = word_1
-  temp_2 = word_2
-  # puts temp_1.length
-  # puts temp_2.length
-  # (temp_1.length == temp_2.length) ? (chars[:template_length] = temp_1.length) : (puts "Words are not of equal length")
-  if temp_1.length == temp_2.length
-    chars[:template_length] = temp_1.length
-  else
-    puts "Not anagrams"
-  end
-end
-# HOW TO: Call check_length
-check_length({word_1_temp}, {word_2_temp})
-some_method({a:1, b:2, c:3}, "words")
-
 # Character Loop-Method
 # First loop iterates over characters of word_1 ('sample'), while the second loop iterates
 # over word_2 ('char'), and checks one at a time, each 'sample' against all 'char's and then
