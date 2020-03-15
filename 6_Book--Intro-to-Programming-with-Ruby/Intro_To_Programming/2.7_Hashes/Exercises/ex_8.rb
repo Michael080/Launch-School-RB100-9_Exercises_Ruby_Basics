@@ -55,10 +55,11 @@ def char_check(word_1, word_2, template_length)
   # !!! May not need this line here as valid_length() performs same
   matches.length == template_length ? true : false
 end
+# HOW TO: Call char_check()
+char_check(words[i], words[i+1], template_length)
 
 iterator = 1
 # Main Loop
-# # chars ex: {:word_1_temp, :word_2_temp}
 for i in 0..(words.length - 2) do
   validator(words[i], words[i+1], chars)
   if char_check(chars[:word_1_temp], chars[:word_2_temp], chars[:template_length])
