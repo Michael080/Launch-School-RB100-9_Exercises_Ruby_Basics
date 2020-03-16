@@ -35,7 +35,9 @@ end
 # moves on to the next instance of 'sample'.
 def char_check(word_1, word_2, template_length)
   matches = [] # array for containing matching characters from word_2 ('char')
-  template_length = word_2.length
+  # !!! below line is temporary for testing purposes
+  # delete once not needed
+  template_length = word_1.length
   # Character loop
   word_1.each do |char|
     sample = char
@@ -53,9 +55,10 @@ def char_check(word_1, word_2, template_length)
   end
   # Check that the number of matches implies an anagram
   matches.length == template_length ? true : false
+  puts matches
 end
 # HOW TO: Call char_check()
-char_check(words[i], words[i+1], template_length)
+# char_check(temp_array[i], temp_array[i+1], template_length)
 
 iterator = 1
 # Main Loop
