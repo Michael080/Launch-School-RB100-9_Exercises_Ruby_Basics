@@ -65,7 +65,7 @@ iterator = 1
 for i in 0..(words.length - 2) do
   template_length = words[i].length
   validator(words[i], temp_array, i)
-  if char_check(temp_array[i], temp_array[i+1], template_length)
+  if char_check(word_1_temp, word_2_temp, template_length)
     anagrams.push([words[i], words[i+1]])
   else
     puts "#{words[i]} and #{words[i+1]} are not anagrams"
