@@ -10,12 +10,11 @@ word_2_temp = words[11].split("")
 
 anagrams = []
 chars = {}
-$iterator = 0
+
 
 # Validator
-# Takes words array at index (i), temp_array, and index (i) as arguments.
-# Split words into individual characters and returns temp_array[i] for comparing
-# temp_array: {:word_1_temp, :word_2_temp}
+# Takes words array, and index (i) as arguments.
+# Split words into individual characters and returns result
 
 def validator(word, i)
   word[i].split('')
@@ -35,9 +34,10 @@ end
 # moves on to the next instance of 'sample'.
 def char_check(word_1, word_2, template_length)
   matches = [] # array for containing matching characters from word_2 ('char')
+  $iterator = 0
   # !!! below line is temporary for testing purposes
   # delete once not needed
-  template_length = word_1.length
+  # template_length = word_1.length
   # Character loop
   word_1.each do |char|
     sample = char
@@ -55,16 +55,21 @@ def char_check(word_1, word_2, template_length)
   end
   # Check that the number of matches implies an anagram
   matches.length == template_length ? true : false
-  puts matches
+  # puts matches
 end
 # HOW TO: Call char_check()
 # char_check(word_1_temp, word_2_temp, template_length)
+# irb: char_check(word_1_temp, word_2_temp, template_length=words[0].length)
 
-iterator = 1
+# iterator = 1
 # Main Loop
+# !!! char_check ouput when run separately produces correct output
+# * Prob w/ main-loop?
+# * Prob w/ validator output?
 for i in 0..(words.length - 2) do
   template_length = words[i].length
-  validator(words[i], temp_array, i)
+  word_1_temp = validator(words, i)
+  word_2_temp = validator(words, i+=1)
   if char_check(word_1_temp, word_2_temp, template_length)
     anagrams.push([words[i], words[i+1]])
   else
