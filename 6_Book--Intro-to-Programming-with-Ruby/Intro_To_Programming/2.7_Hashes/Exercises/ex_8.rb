@@ -58,7 +58,7 @@ def char_check(word_1, word_2, template_length)
   puts matches
 end
 # HOW TO: Call char_check()
-# char_check(temp_array[i], temp_array[i+1], template_length)
+# char_check(word_1_temp, word_2_temp, template_length)
 
 iterator = 1
 # Main Loop
