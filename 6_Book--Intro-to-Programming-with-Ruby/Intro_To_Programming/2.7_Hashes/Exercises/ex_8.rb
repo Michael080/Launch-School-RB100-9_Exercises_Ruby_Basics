@@ -21,7 +21,7 @@ def validator(word, i)
   word[i].split('')
 end
 # HOW TO: Call validator
-# validator(words[i], temp_array, i)
+# validator(words, i)
 
 # !!! Need to use 'Character Loop' in a method
 # which will be called in 'Main Loop'
