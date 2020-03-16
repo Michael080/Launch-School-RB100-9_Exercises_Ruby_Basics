@@ -17,8 +17,8 @@ $iterator = 0
 # Split words into individual characters and returns temp_array[i] for comparing
 # temp_array: {:word_1_temp, :word_2_temp}
 
-def validator(word, temp_array, i)
-  temp_array[i] = word.split('')
+def validator(word, i)
+  word[i].split('')
 end
 # HOW TO: Call validator
 # validator(words[i], temp_array, i)
