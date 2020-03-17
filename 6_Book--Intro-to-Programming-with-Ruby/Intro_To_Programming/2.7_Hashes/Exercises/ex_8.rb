@@ -66,10 +66,11 @@ end
 # !!! char_check ouput when run separately produces correct output
 # * Prob w/ main-loop?
 # * Prob w/ validator output?
+# * $iterator?
 for i in 0..(words.length - 2) do
   template_length = words[i].length
   word_1_temp = validator(words, i)
-  word_2_temp = validator(words, i+=1)
+  word_2_temp = validator(words, i+1)
   if char_check(word_1_temp, word_2_temp, template_length)
     anagrams.push([words[i], words[i+1]])
   else
