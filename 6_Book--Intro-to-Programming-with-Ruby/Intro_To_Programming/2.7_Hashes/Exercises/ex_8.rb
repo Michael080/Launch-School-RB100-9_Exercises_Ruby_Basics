@@ -63,19 +63,21 @@ end
 
 # iterator = 1
 # Main Loop
-# !!! char_check ouput when run separately produces correct output
-# * Prob w/ main-loop?
-# * Prob w/ validator output?
-# * $iterator?
+# !!! Fix self-check bug
 for i in 0..(words.length - 2) do
   template_length = words[i].length
   word_1_temp = validator(words, i)
-  word_2_temp = validator(words, i+1)
-  if char_check(word_1_temp, word_2_temp, template_length)
-    anagrams.push([words[i], words[i+1]])
-  else
-    puts "#{words[i]} and #{words[i+1]} are not anagrams"
+  word_1 = words[i]
+  for i in 0..(words.length - 2) do
+    word_2_temp = validator(words, i+1)
+    word_2 = words[i+1]
+    if char_check(word_1_temp, word_2_temp, template_length)
+      anagrams.push([word_1, word_2])
+    else
+      puts "#{words[i]} and #{words[i+1]} are not anagrams"
+    end
   end
+
   puts "Anagrams: #{anagrams}"
 end
 
