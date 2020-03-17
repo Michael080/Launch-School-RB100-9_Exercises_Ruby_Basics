@@ -39,12 +39,12 @@ def char_check(word_1, word_2, template_length)
   # delete once not needed
   # template_length = word_1.length
   # Character loop
-  word_1.each do |char|
-    sample = char
-    word_2.each do |char|
+  word_1.each do |char_1|
+    sample = char_1
+    word_2.each do |char_2|
       # puts "#{sample} : #{char}"
-      if (sample == char)
-        matches.push(char)
+      if (sample == char_2)
+        matches.push(char_2)
         # puts "$iterator:#{$iterator}  char:#{char}"
         word_2.delete_at($iterator)
         $iterator += 1
@@ -68,13 +68,13 @@ for i in 0..(words.length - 2) do
   template_length = words[i].length
   word_1_temp = validator(words, i)
   word_1 = words[i]
-  for i in 0..(words.length - 2) do
-    word_2_temp = validator(words, i+1)
-    word_2 = words[i+1]
+  for y in 0..(words.length - 2) do
+    word_2_temp = validator(words, y+1)
+    word_2 = words[y+1]
     if char_check(word_1_temp, word_2_temp, template_length)
       anagrams.push([word_1, word_2])
     else
-      puts "#{words[i]} and #{words[i+1]} are not anagrams"
+      puts "#{words[i]} and #{words[y+1]} are not anagrams"
     end
   end
 
