@@ -64,21 +64,20 @@ end
 # iterator = 1
 # Main Loop
 # !!! Fix self-check bug
-for i in 0..(words.length - 2) do
+for i in 0..(words.length - 2) do # 0, -1
   template_length = words[i].length
   word_1_temp = validator(words, i)
   word_1 = words[i]
-  for y in 0..(words.length - 2) do
-    word_2_temp = validator(words, y+1)
-    word_2 = words[y+1]
-    if char_check(word_1_temp, word_2_temp, template_length)
+  for y in 1..(words.length - 1) do
+    word_2_temp = validator(words, y)
+    word_2 = words[y]
+
+    if char_check(word_1_temp, word_2_temp, template_length) && (word_1 != word_2)
       anagrams.push([word_1, word_2])
     else
       puts "#{words[i]} and #{words[y+1]} are not anagrams"
+      puts "word_2: #{word_2}"
     end
   end
-
-  puts "Anagrams: #{anagrams}"
 end
 
-# array.length == word_2.length ? anagrams.push([word_1, word_2]) : (puts "Not anagrams :(")
