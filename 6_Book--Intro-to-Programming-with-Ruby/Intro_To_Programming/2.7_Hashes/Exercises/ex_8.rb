@@ -37,14 +37,13 @@ def char_check(word_1, word_2, template_length)
   matches.length == template_length ? true : false
 end
 
-for i in 0..(words.length - 2) do # 0, -1
+for i in 0..(words.length - 2) do
   template_length = words[i].length
   word_1_temp = validator(words, i)
   word_1 = words[i]
   for y in 1..(words.length - 1) do
     word_2_temp = validator(words, y)
     word_2 = words[y]
-
     if char_check(word_1_temp, word_2_temp, template_length) && (word_1 != word_2)
       anagrams.push([word_1, word_2])
     else
