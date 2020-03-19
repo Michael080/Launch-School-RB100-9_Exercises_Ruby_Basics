@@ -7,6 +7,8 @@
 # "Pans Labyrinth"
 # "elaborate"
 # "polar bear"
+puts "--------------------------------------------------
+1.)"
 
 words = ["labaratory", "experiment", "Pans Labyrinth", "elaborate", "polar bear"]
 
@@ -23,3 +25,18 @@ def lab_check(word)
 end
 
 word_loop(words)
+
+
+#####################################################################
+puts "--------------------------------------------------
+2.)"
+# What will the following program print to the screen? What
+# will it return?
+
+def execute(&block)
+  block
+end
+
+execute { puts "Hello from inside the execute method!" }
+
+puts "Nothing is printed to screen. A 'Proc' object is returned."
