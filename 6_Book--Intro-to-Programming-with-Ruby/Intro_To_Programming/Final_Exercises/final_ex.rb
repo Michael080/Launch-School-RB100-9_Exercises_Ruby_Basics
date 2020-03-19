@@ -59,3 +59,11 @@ puts "--------------------------------------------------------
 
 numbers.uniq!
 puts "numbers: #{numbers}"
+
+
+##############################################################
+puts "--------------------------------------------------------
+7.)"
+# What's the major difference between an Array and a Hash?
+
+puts "Arrays are indexed/ordered values and hashes use key-value pairs"
