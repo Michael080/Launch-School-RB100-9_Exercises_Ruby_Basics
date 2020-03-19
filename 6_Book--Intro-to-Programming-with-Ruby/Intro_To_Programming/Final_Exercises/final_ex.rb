@@ -78,3 +78,33 @@ hashy = {wammo: "blammo"}
 hasherish = {:shamwow => "kapow!"}
 
 puts "hashy: #{hashy} / hasherish: #{hasherish}"
+
+
+##############################################################
+puts "--------------------------------------------------------
+9.)"
+# Suppose you have a hash h = {a:1, b:2, c:3, d:4}
+h = {a:1, b:2, c:3, d:4}
+# 1. Get the value of key `:b`.
+puts ":b => #{h[:b]}"
+# 2. Add to this hash the key:value pair `{e:5}`
+h[:e] = 5
+puts ":e => #{h[:e]}"
+# 3. Remove all key:value pairs whose value is less than 3.5
+h.delete_if { |key, value| value < 3.5}
+puts "h: #{h}"
+
+
+##############################################################
+puts "--------------------------------------------------------
+10.)"
+#Can hash values be arrays? Can you have an array of hashes?
+# (give examples)
+
+# hash values as arrays:
+hashray = {arr: ["check", "this", "array"]}
+puts "hashray: #{hashray}"
+
+# Array of hashes:
+arrash = [{a: 1, b: 2, c: 3 }]
+puts "arrash: #{arrash}"
