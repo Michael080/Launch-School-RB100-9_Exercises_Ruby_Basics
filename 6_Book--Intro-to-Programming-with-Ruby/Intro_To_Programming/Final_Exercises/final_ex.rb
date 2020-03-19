@@ -41,3 +41,21 @@ numbers.push(11)
 numbers.unshift(0)
 puts "numbers: #{numbers}"
 
+
+##############################################################
+puts "--------------------------------------------------------
+5.)"
+# Get rid of 11. And append a 3.
+
+numbers.pop
+numbers.push(3)
+puts "numbers: #{numbers}"
+
+
+##############################################################
+puts "--------------------------------------------------------
+6.)"
+# Get rid of duplicates without specifically removing any one value.
+
+numbers.uniq!
+puts "numbers: #{numbers}"
