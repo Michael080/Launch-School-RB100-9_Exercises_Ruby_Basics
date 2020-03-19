@@ -40,3 +40,13 @@ end
 execute { puts "Hello from inside the execute method!" }
 
 puts "Nothing is printed to screen. A 'Proc' object is returned."
+
+
+#####################################################################
+puts "--------------------------------------------------
+3.)"
+# What is exception handling and what problem does it solve?
+
+puts "Exception handling allows for the continued execution of
+spec'd code when an error is thrown"
+
