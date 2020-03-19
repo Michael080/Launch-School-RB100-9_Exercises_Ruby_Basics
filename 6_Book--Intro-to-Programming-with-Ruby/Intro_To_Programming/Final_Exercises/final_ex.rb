@@ -19,3 +19,16 @@ puts "--------------------------------------------------------
 numbers.each do |num|
   num > 5 ? (puts num) : next
 end
+
+
+##############################################################
+puts "--------------------------------------------------------
+3.)"
+# Now, using the same array from #2, use the select method to
+# extract all odd numbers into a new array.
+
+odds = numbers.select { |num| num.odd? }
+
+puts "odds: #{odds}"
+
+
