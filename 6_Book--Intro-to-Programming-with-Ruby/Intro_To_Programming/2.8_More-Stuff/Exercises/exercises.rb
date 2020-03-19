@@ -50,3 +50,34 @@ puts "--------------------------------------------------
 puts "Exception handling allows for the continued execution of
 spec'd code when an error is thrown"
 
+
+#####################################################################
+puts "--------------------------------------------------
+4.)"
+# Modify the code in exercise 2 to make the block execute properly.
+
+def execute(&block)
+  block.call
+end
+
+execute { puts "Hello from inside the execute method!" }
+
+
+#####################################################################
+puts "--------------------------------------------------
+5.)"
+# Why does the following code...
+
+# def execute(block)
+#   block.call
+# end
+#
+# execute { puts "Hello from inside the execute method!" }
+
+# Give us the following error when we run it?
+
+# block.rb1:in `execute': wrong number of arguments (0 for 1) (ArgumentError)
+# from test.rb:5:in `<main>'
+
+puts "The parameter in execute(block) doesn't allow for the
+execution of a block, '&block' should be used instead."
