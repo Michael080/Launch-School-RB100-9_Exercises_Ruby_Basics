@@ -32,3 +32,12 @@ odds = numbers.select { |num| num.odd? }
 puts "odds: #{odds}"
 
 
+##############################################################
+puts "--------------------------------------------------------
+4.)"
+# Append 11 to the end of the original array. Prepend 0 to the beginning.
+
+numbers.push(11)
+numbers.unshift(0)
+puts "numbers: #{numbers}"
+
