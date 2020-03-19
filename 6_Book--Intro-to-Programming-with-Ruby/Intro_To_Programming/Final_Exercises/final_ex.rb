@@ -67,3 +67,14 @@ puts "--------------------------------------------------------
 # What's the major difference between an Array and a Hash?
 
 puts "Arrays are indexed/ordered values and hashes use key-value pairs"
+
+
+##############################################################
+puts "--------------------------------------------------------
+8.)"
+# Create a Hash, with one key-value pair, using both Ruby syntax styles.
+
+hashy = {wammo: "blammo"}
+hasherish = {:shamwow => "kapow!"}
+
+puts "hashy: #{hashy} / hasherish: #{hasherish}"
