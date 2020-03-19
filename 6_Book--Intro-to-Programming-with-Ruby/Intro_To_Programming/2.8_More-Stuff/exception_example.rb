@@ -8,4 +8,5 @@ rescue
   # do this if operation fails
   # for example, log the error
   puts "Something went wrong!"
+  end
 end
