@@ -161,3 +161,25 @@ arr = ['snow', 'winter', 'ice', 'slippery', 'salted roads', 'white trees']
 # start with "s" or starts with "w".
 
 arr.delete_if{|word| word.start_with?("s")}
+
+
+##############################################################
+puts "--------------------------------------------------------
+14.)"
+# Take the following array:
+
+a = ['white snow', 'winter wonderland', 'melting ice',
+     'slippery sidewalk', 'salted roads', 'white trees']
+
+# and turn it into a new array that consists of strings
+# containing one word.
+# (ex. ["white snow", etc...] → ["white", "snow", etc...].
+# Look into using Array's map and flatten methods, as well as
+# String's split method.
+
+def splitter(array)
+  array.map { |item| item.split(' ')}
+end
+
+b = splitter(a).flatten!
+print b
