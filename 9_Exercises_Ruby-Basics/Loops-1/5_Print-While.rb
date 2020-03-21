@@ -8,3 +8,12 @@ while counter <= 5
   puts rand(99)
   counter += 1
 end
+
+# LS Solution:
+numbers = []
+
+while numbers.size < 5
+  numbers << rand(100)
+end
+
+puts numbers
