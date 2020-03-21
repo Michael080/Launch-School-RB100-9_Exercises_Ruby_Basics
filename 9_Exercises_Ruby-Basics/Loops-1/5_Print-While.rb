@@ -4,12 +4,12 @@
 
 counter = 0
 
-while counter <= 5
+while counter < 5
   puts rand(99)
   counter += 1
 end
 
-# LS Solution:
+LS Solution:
 numbers = []
 
 while numbers.size < 5
