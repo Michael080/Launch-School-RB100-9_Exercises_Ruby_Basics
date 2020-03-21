@@ -9,7 +9,7 @@ while counter < 5
   counter += 1
 end
 
-LS Solution:
+# LS Solution:
 numbers = []
 
 while numbers.size < 5
