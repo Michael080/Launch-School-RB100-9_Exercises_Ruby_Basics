@@ -9,3 +9,14 @@ loop do
   process_the_loop ? (puts "The loop was processed!") : (puts"The loop wasn't processed!")
   break
 end
+
+
+# LS solution:
+if process_the_loop
+  loop do
+    puts "The loop was processed!"
+    break
+  end
+else
+  puts "The loop wasn't processed!"
+end
