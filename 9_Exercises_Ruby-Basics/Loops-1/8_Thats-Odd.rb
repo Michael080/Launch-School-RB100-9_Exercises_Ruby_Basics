@@ -5,3 +5,8 @@
 for i in 1..100
   i % 2 != 0 ? (puts i) : next
 end
+
+# LS solution:
+for i in 1..100
+  puts i if i.odd?
+end
