@@ -3,7 +3,11 @@
 # entered.
 
 puts "Tell me something..."
-
 repeater = gets.chomp
-
 puts repeater
+
+
+# LS solution:
+puts ">> Type anything you want:"
+text = gets
+puts text
