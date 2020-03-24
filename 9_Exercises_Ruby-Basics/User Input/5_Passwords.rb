@@ -6,11 +6,14 @@
 # the correct password.
 
 PASSWORD = "WoWzerz!"
+USERNAME = "ZaphodB_3000"
 
 loop do
-  puts ">> Enter password:"
-  input = gets.chomp
-  input == PASSWORD ? break : next
+  puts ">> Username:"
+  username = gets.chomp
+  puts ">> Password:"
+  user_pass = gets.chomp
+  user_pass == PASSWORD && username == USERNAME ? break : next
 end
 
 puts "Welcome sire"
