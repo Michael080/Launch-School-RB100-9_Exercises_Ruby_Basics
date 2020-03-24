@@ -11,8 +11,10 @@ USERNAME = "ZaphodB_3000"
 loop do
   puts ">> Username:"
   username = gets.chomp
+
   puts ">> Password:"
   user_pass = gets.chomp
+
   user_pass == PASSWORD && username == USERNAME ? break : next
 end
 
