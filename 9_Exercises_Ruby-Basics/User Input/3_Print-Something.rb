@@ -3,13 +3,29 @@
 # Otherwise, print nothing.
 
 loop do
-  puts ">> Print something?"
-  input = gets.chomp
-  if input == 'y'
-    puts "Printing....
+  puts ">> Print something? (Enter 'y' (yes) or 'n' (no)"
+  input = gets.chomp.downcase
+
+  if (input == 'y' || input == 'n')
+
+    if input == 'y'
+      puts "Printing....
 Printing...
 Something."
+      break
+    else
+      break
+    end
+
+  else
+    puts ">> Please enter 'y (yes) or 'n' (no)"
     break
   end
 end
+
+
+# LS solution:
+puts '>> Do you want me to print something? (y/n)'
+choice = gets.chomp
+puts 'something' if choice == 'y'
 
