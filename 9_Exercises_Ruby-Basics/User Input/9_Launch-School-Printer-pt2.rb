@@ -12,7 +12,7 @@ lines = nil
 
 loop do
   # Get input (query number of lines?)
-  puts ">> How many output lines do you want? Enter a number >= 3:"
+  puts ">> How many output lines do you want? Enter a number >= 3 (Q to quit):"
   lines = gets.chomp
   lines.to_s == 'Q' ? break : (lines = lines.to_i)
   # Validate (3 line minimum input)
