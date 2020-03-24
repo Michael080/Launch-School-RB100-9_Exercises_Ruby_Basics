@@ -25,7 +25,6 @@ loop do
   num_1 = gets.chomp
 
   next if no_zeros(num_1)
-
   break if valid_number?(num_1)
   puts "ERROR! Please enter a valid number"
 end
