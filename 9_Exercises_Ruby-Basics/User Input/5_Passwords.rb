@@ -15,7 +15,8 @@ loop do
   puts ">> Password:"
   user_pass = gets.chomp
 
-  user_pass == PASSWORD && username == USERNAME ? break : next
+  break if user_pass == PASSWORD && username == USERNAME
+  puts ">> The username and password you entered are incorrect"
 end
 
 puts "Welcome sire"
