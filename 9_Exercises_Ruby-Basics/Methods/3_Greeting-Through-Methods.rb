@@ -13,7 +13,7 @@ end
 # puts "#{hello} #{world}"
 
 
-# Greeting Through Methods (Part 2)
+# 4_Greeting Through Methods (Part 2)
 # Write a method named greet that invokes the following methods:
 
 def greet
