@@ -1,3 +1,6 @@
+#==============================================================
+# Stoplight (Part 1)
+#
 # In the code below, stoplight is randomly assigned as 'green',
 # 'yellow', or 'red'.
 
@@ -22,6 +25,22 @@ case stoplight
 when 'green'
   puts 'Go!'
 when 'yellow'
+  puts 'Slow down!'
+else
+  puts 'Stop!'
+end
+
+
+#==============================================================
+# Stoplight (Part 2)
+#
+# Convert the following case statement to an if statement.
+
+stoplight = ['green', 'yellow', 'red'].sample
+
+if stoplight == 'green'
+  puts 'Go!'
+elsif stoplight == 'yellow'
   puts 'Slow down!'
 else
   puts 'Stop!'
