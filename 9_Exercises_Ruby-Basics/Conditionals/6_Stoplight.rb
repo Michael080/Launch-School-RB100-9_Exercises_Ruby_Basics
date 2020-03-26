@@ -45,3 +45,38 @@ elsif stoplight == 'yellow'
 else
   puts 'Stop!'
 end
+
+
+#==============================================================
+# Stoplight (Part 3)
+#
+# Reformat the following case statement so that it only takes up
+# 5 lines.
+
+stoplight = ['green', 'yellow', 'red'].sample
+#
+# case stoplight
+# when 'green'
+#   puts 'Go!'
+# when 'yellow'
+#   puts 'Slow down!'
+# else
+#   puts 'Stop!'
+# end
+
+6 lines:
+case stoplight
+when 'green'
+  puts 'Roll!'
+else
+  stoplight == 'yellow' ? puts('Slow...') : puts('Yo!')
+end
+
+6 lines:
+stoplight = ['green', 'yellow', 'red'].sample
+
+if stoplight != 'red'
+  stoplight == 'green' ? puts("Go") : puts('Slow yo!')
+else
+  puts 'Stop'
+end
