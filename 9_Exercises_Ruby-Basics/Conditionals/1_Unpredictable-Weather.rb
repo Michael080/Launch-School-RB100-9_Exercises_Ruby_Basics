@@ -12,3 +12,16 @@ sun = ['visible', 'hidden'].sample
 if sun == 'visible'
   puts "The sun is so bright!"
 end
+
+
+#========================================================
+# Unpredictable Weather (Part 2)
+#
+# In the code below, sun is randomly assigned as 'visible'
+# or 'hidden'.
+
+sun = ['visible', 'hidden'].sample
+
+unless sun == 'visible'
+  puts "The clouds are blocking the sun!"
+end
