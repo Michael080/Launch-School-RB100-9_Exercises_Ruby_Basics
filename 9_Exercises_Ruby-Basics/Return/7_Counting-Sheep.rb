@@ -1,11 +1,12 @@
 # ==============================================================
 # Counting Sheep (Part 1)
+#
 # What will the following code print? Why? Don't run it until
 # you've attempted to answer.
 
 def count_sheep
   5.times do |sheep|
-    puts "Printing:"
+    # puts "Printing:"
     puts sheep
   end
 end
@@ -30,3 +31,18 @@ puts "Prints numbers from 0 - 4 to screen & returns 5"
 # we now know that the return value of count_sheep is 5.
 
 
+# # ==============================================================
+# # Counting Sheep (Part 2)
+#
+# What will the following code print? Why? Don't run it until
+# you've attempted to answer.
+
+def count_sheep
+  5.times do |sheep|
+    puts sheep
+  end
+  10
+end
+
+puts count_sheep
+puts "Prints numbers from 0 - 4 to screen & returns 10"
