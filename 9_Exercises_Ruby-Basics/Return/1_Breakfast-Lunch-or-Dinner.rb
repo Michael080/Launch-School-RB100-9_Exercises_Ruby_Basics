@@ -55,3 +55,16 @@ end
 puts meal
 puts "Prints: 'Dinner' & Returns: 'Breakfast'"
 
+
+#==============================================================
+# BREAKFAST, LUNCH, OR DINNER (PART 5)
+# What will the following code print? Why? Don't run it until
+# you've attempted to answer.
+
+def meal
+  'Dinner'
+  puts 'Dinner'
+end
+
+p meal
+puts "Prints 'Dinner' to screen and prints 'nil'"
