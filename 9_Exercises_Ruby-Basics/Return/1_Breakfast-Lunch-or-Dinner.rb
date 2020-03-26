@@ -68,3 +68,18 @@ end
 
 p meal
 puts "Prints 'Dinner' to screen and prints 'nil'"
+
+
+#==============================================================
+# BREAKFAST, LUNCH, OR DINNER (PART 6)
+# What will the following code print? Why? Don't run it until
+# you've attempted to answer.
+
+def meal
+  return 'Breakfast'
+  'Dinner'
+  puts 'Dinner'
+end
+
+puts meal
+puts "Returns 'Breakfast'"
