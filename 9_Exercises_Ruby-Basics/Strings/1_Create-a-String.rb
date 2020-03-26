@@ -3,3 +3,5 @@
 
 blank = String("")
 
+# LS solution:
+empty_string = String.new
