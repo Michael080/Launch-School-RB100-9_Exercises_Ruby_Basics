@@ -15,3 +15,14 @@ when stoplight == 'yellow'
 when stoplight == 'red'
   puts "Stop!"
 end
+
+
+# LS solution
+case stoplight
+when 'green'
+  puts 'Go!'
+when 'yellow'
+  puts 'Slow down!'
+else
+  puts 'Stop!'
+end
