@@ -7,3 +7,10 @@ colors = 'blue pink yellow orange'
 
 /yellow/.match(colors) ? puts("true") : puts("false")
 /purple/.match(colors) ? puts("true") : puts("false")
+
+
+# LS solution:
+colors = 'blue pink yellow orange'
+
+puts colors.include?('yellow')
+puts colors.include?('purple')
