@@ -11,3 +11,8 @@ my_pets = pets[2..3]
 
 my_pets.slice!(1)
 puts my_pets
+
+# LS solution:
+my_pets.pop
+
+puts "I have a pet #{my_pets[0]}!"
