@@ -9,3 +9,10 @@ state = state.downcase
 state[0] = state[0].upcase
 
 puts state
+
+
+# LS solution:
+state = 'tExAs'
+
+state.capitalize!
+puts state
