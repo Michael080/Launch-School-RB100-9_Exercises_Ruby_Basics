@@ -11,3 +11,11 @@ doubled_numbers = Array.new
 
 doubled_numbers.push(numbers.map { |number| number * 2 })
 puts doubled_numbers
+
+
+# LS solution:
+doubled_numbers = numbers.map do |number|
+  number * 2
+end
+
+p doubled_numbers
