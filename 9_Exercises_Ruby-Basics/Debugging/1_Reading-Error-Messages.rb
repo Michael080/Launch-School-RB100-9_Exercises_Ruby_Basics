@@ -11,7 +11,7 @@ end
 # Examples
 
 find_first_nonzero_among(0, 0, 1, 0, 2, 0)
-find_first_nonzero_among(1)
+find_first_nonzero_among([1])
 
 puts "	1: from /home/mroll/Documents/Class/Web Development/Launch School/RB100/9_Exercises_Ruby-Basics/Debugging/1_Reading-Error-Messages.rb:13:in `<main>'"
 puts "/home/mroll/Documents/Class/Web Development/Launch School/RB100/9_Exercises_Ruby-Basics/Debugging/1_Reading-Error-Messages.rb:5:in `find_first_nonzero_among': wrong number of arguments (given 6, expected 1) (ArgumentError)"
