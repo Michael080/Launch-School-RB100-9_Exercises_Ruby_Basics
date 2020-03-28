@@ -16,3 +16,11 @@ numbers.map do |key, value|
 end
 
 p low_numbers
+
+
+# LS solution:
+low_numbers = numbers.select do |key, value|
+  value < 25
+end
+
+p low_numbers
