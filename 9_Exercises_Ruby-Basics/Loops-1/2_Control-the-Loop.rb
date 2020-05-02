@@ -19,3 +19,8 @@ loop do
   iterations += 1
   break if iterations > 5
 end
+
+# Further Exploration
+# If the break statement is moved up one line so it runs before
+# iterations is incremented, what would need to be changed?
+puts "The conditional would need to change to 'iterations > 4'"
