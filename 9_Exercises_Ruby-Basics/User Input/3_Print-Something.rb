@@ -34,3 +34,12 @@ loop do
 end
 puts 'something' if choice == 'y'
 
+
+# Further Exploration
+# What happens if you type Y (in uppercase) instead of y
+# in response to the prompt? This is a bad user experience:
+# when obtaining input from a user, you should almost
+# always allow both uppercase and lowercase entries. Can
+# you modify this program so that it prints "something" if
+# the user enters Y or y?
+puts "Answer: I accounted for this in my previous answer."
